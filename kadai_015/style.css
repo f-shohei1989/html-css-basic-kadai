@@ -1,0 +1,39 @@
+/* ルート設定. :rootはhtmlと同意 */
+:root {
+  font-size: 20px;
+  --pink: rgb(255, 192, 203);  /* 見出しピンク */
+  --blue: skyblue;  /* 見出しブルー */
+  --text: #000000;  
+}
+
+
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+  color: var(--text);
+  background: #fff;
+  text-align: center;
+  line-height: 1.9;
+  padding: 24px 20px 80px;  /* 内側の余白 上・左右・下 */
+}
+
+.pink {
+  color: var(--pink);
+}
+.blue {
+  color: var(--blue);
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-style: normal;
+  letter-spacing: 1.2em;  /* 文字間フォントサイズの1.2倍 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);/* 右へ2px、下へ2px、ぼかし4px、半透明の黒 */
+  border-bottom: 3px solid rgb(115, 115, 114);  /* 下線（3pxの実線、指定カラー） */
+}
+
+#basic p {
+  font-weight: bold;
+
+}
