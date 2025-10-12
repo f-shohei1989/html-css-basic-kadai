@@ -1,0 +1,89 @@
+h1, body, p {
+  margin: 0px;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+main {
+  margin: 10px;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contents {
+  border: 3px solid rgb(238, 204, 204);  /* 要素を囲う */
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+}
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139); 
+}
+
+/* 傘 の１文字のみ装飾する */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249)
+}
+/* 画像の装飾 */
+.contents img {
+  display: block;
+  margin: 10px auto 0;
+  width: 70%;
+}
+
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+  padding: 5px 0;  /* 上下に少し余白 */
+}
+
+/* a要素の装飾 */
+a {
+  color: rgb(255, 255, 255);  /* 通常時の文字色（白） */
+}
+a:visited {
+  color: rgb(193, 234, 251);  /* 訪問済みリンクの色 */
+}
+a:hover {
+  color: rgb(245, 178, 168);/* ホバー時の色 */
+}
+
+/* 画面幅768px以下のときのレスポンシブ設定 */
+@media screen and (max-width: 768px) {
+  /* h2の文字サイズを30pxに */
+  h2 {
+    font-size: 30px;
+  }
+    /* pの文字サイズを25pxに */
+  p {
+    font-size: 25px;
+  }
+  /* Flexコンテナ内の要素を縦並びに */
+  #parent {
+    flex-direction: column;  /* 横並びから縦並びに変更 */
+    align-items: center;  /* 中央揃え */
+  }
+}
